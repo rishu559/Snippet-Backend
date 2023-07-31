@@ -9,10 +9,10 @@ const cors = require("cors");
 
 const app = express();
 
-mongoose
-  .connect(process.env.DB_URL)
-  .then(() => console.log("Databse Connected Successfully !!!"))
-  .catch((error) => console.log(error.message));
+// mongoose
+//   .connect(process.env.DB_URL)
+//   .then(() => console.log("Databse Connected Successfully !!!"))
+//   .catch((error) => console.log(error.message));
 
 // one way
 app.get("/api/test", () => {
