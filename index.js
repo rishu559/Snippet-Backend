@@ -15,7 +15,7 @@ const app = express();
 //   .catch((error) => console.log(error.message));
 
 // one way
-app.get("/api/test", () => {
+app.get("/", () => {
   console.log("Test is Successfull");
 });
 
