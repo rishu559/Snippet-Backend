@@ -7,8 +7,8 @@ router.get("/", async (req, res) => {
   const keyword = req.query.search
     ? {
         $or: [
-          { title: { $regex: req.query.search } },
-          { description: { $regex: req.query.search } },
+          { title: { $regex: req.query.search ,$options:'i' } },
+          { description: { $regex: req.query.search ,$options:'i'} },
         ],
       }
     : {};
