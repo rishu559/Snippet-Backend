@@ -1,4 +1,4 @@
-const Snippet = require("../models/snippet");
+const Snippet = require("../models/Snippet");
 
 const router = require("express").Router();
 
