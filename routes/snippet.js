@@ -21,9 +21,9 @@ router.get("/", async (req, res) => {
       snippets = await Snippet.find(keyword);
     }
 
-    res.status(200).json(snippets);
+    return res.status(200).json(snippets);
   } catch (err) {
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
 router.post("/", async (req, res) => {
@@ -35,9 +35,9 @@ router.post("/", async (req, res) => {
   try {
     const snippet = await Snippet.create(req.body);
     const savedSnippet = await snippet.save();
-    res.json(savedSnippet).status(200);
+    return res.json(savedSnippet).status(200);
   } catch (err) {
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
 
