@@ -9,6 +9,16 @@ const cors = require("cors");
 
 const app = express();
 
+dotenv.config();
+mongoose.set("strictQuery", true);
+let message = "";
+mongoose
+  .connect(process.env.DB_URL)
+  .then(() => {
+    message = "mongodb connected";
+    console.log("DB connected successfully...");
+  })
+  .catch((err) => console.log(err));
 // mongoose
 //   .connect(process.env.DB_URL)
 //   .then(() => console.log("Databse Connected Successfully !!!"))
