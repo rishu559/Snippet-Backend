@@ -27,8 +27,9 @@ const app = express();
 //   .catch((error) => console.log(error.message));
 
 // one way
-app.get("/", () => {
+app.get("/", (req,res) => {
   console.log("Test is Successfull");
+  res.send("Hello");
 });
 
 // another way
