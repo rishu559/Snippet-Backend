@@ -41,6 +41,6 @@ app.get("/", () => {
 
 // app.use("/api/checkout",paymentRoute);
 
-app.listen(process.env.PORT || 5001, () => {
+app.listen(5000, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
