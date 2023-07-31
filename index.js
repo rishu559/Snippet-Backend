@@ -30,7 +30,7 @@ mongoose
 // one way
 app.get("/", (req,res) => {
   console.log("Test is Successfull");
-  res.send("Hello");
+  return res.send("Hello");
 });
 
 // another way
