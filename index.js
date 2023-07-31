@@ -21,7 +21,7 @@ app.get("/", () => {
 
 // another way
 //payment block na ho
-app.use(cors());
+// app.use(cors());
 
 app.use(express.json());
 
